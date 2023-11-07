@@ -1,0 +1,297 @@
+/* Google font inclusion */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Reset styles */
+body, h1, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Wrapper */
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #1e1e1e;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-header {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.nav ul {
+    padding: 20px 0;
+}
+
+.nav li a {
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+    font-weight: 400;
+}
+
+.nav li a .icon {
+    margin-right: 10px;
+}
+
+.nav li a:hover,
+.nav li a.active {
+    background-color: #575757;
+}
+
+/* Icons (pseudo-elements used for the sake of example) */
+.nav li a .icon::before {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.2em;
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-size: cover;
+}
+
+.home-icon::before {
+    background-image: url('icons/home.svg');
+}
+
+.paper-icon::before {
+    background-image: url('icons/paper.svg');
+}
+
+.factor-icon::before {
+    background-image: url('icons/factor.svg');
+}
+
+.thoughts-icon::before {
+    background-image: url('icons/thought.svg');
+}
+
+.future-icon::before {
+    background-image: url('icons/future.svg');
+}
+
+/* Main Content */
+.main-content {
+    padding: 40px;
+    flex-grow: 1;
+    background-color: #f4f4f4;
+}
+
+.main-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.main-content p {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+}
+
+
+/* ############## papers.html #################### */
+/* Paper list styles */
+.paper-list {
+    margin-top: 2em;
+}
+
+.paper {
+    background: #fff;
+    margin-bottom: 1em;
+    padding: 1em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+.paper h2 {
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+.paper-summary {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 1em;
+}
+
+.read-more {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.read-more:hover {
+    background: #0056b3;
+}
+
+
+
+/* ####### Factors.html ######## */
+/* Factor category styles */
+.factor-category {
+    margin-top: 2em;
+}
+
+.factor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1em;
+}
+
+.factor-tile {
+    background: #fff;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.factor-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.factor-category h2 {
+    margin: 1em 0;
+}
+
+.factor-tile h3 {
+    margin-bottom: 0.5em;
+    color: #007bff;
+}
+
+.factor-tile p {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black with opacity */
+    padding-top: 50px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Responsive width */
+    border-radius: 5px;
+    animation: slideDown 0.5s; /* Adding slide down effect */
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.modal-body { 
+    padding: 2px 16px; 
+}
+
+.modal-tabs {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.tab-link {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.tab-link:hover {
+    background-color: #ddd;
+}
+
+.tab-link.current {
+    border-bottom: 3px solid #f44336;
+}
+
+.tab-content {
+    display: none; /* Hide content by default */
+    padding: 20px;
+}
+
+.tab-content.current {
+    display: block; /* Show current tab */
+    animation: fadeEffect 1s; /* Fade in effect for tab change */
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { margin-top: -300px; opacity: 0; }
+    to { margin-top: 5%; opacity: 1; }
+}

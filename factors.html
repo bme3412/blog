@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investing Factors - Quant Analysis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <!-- Sidebar with navigation -->
+    <aside class="sidebar">
+        <header class="logo-header">
+            <img src="workspace.png" alt="Your Logo" class="logo">
+        </header>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html" ><span class="icon home-icon"></span>Home</a></li>
+                <li><a href="papers.html"><span class="icon paper-icon"></span>Papers</a></li>
+                <li><a href="factors.html"class="active"><span class="icon factor-icon"></span>Factors</a></li>
+                <li><a href="thoughts.html"><span class="icon thoughts-icon"></span>Thoughts</a></li>
+                <li><a href="futurework.html"><span class="icon future-icon"></span>Future Work</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main content -->
+    <!-- Main content -->
+<main class="main-content">
+    <h1>Investing Factors</h1>
+    <p>Deep dive into the meanings and calculations behind various investing factors.</p>
+    
+    <section class="factor-category">
+        <h2>Value Factors</h2>
+        <div class="factor-grid">
+            <!-- Book to Price Factor Tile -->
+            <div class="factor-tile" onclick="openModal('bookToPriceModal')">
+                <h3>Book to Price</h3>
+                <p>Measures a company's book value relative to its market valuation...</p>
+            </div>
+            <!-- Earnings Yield Factor Tile -->
+            <!-- Earnings Yield Factor Tile -->
+<div class="factor-tile" onclick="openModal('earningsYieldModal')">
+    <h3>Earnings Yield</h3>
+    <p>Represents the earnings per share for the most recent 12-month period divided by the current market price per share...</p>
+</div>
+    <!-- Factor Tile for P/E Ratio that opens the modal on click -->
+<div class="factor-tile" onclick="openModal('peRatioModal')">
+    <h3>P/E Ratio</h3>
+    <p>Short description...</p>
+</div>
+            <!-- Additional factor tiles would be repeated following the same structure -->
+        </div>
+    </section>
+    
+    <!-- The Modal for Book to Price -->
+    <div id="bookToPriceModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h2>Book to Price Ratio</h2>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <!-- Modal Tabs -->
+                <div class="modal-tabs">
+                    <button class="tab-link current" onclick="openTab(event, 'bookToPrice-definition')">Definition</button>
+                    <button class="tab-link" onclick="openTab(event, 'bookToPrice-significance')">Significance</button>
+                    <button class="tab-link" onclick="openTab(event, 'bookToPrice-caveats')">Caveats</button>
+                    <button class="tab-link" onclick="openTab(event, 'bookToPrice-formula')">Formula</button>
+                    <button class="tab-link" onclick="openTab(event, 'bookToPrice-code')">Code</button>
+                    <button class="tab-link" onclick="openTab(event, 'bookToPrice-data')">Data</button>
+                </div>
+            
+                <!-- Tab Content for Book to Price -->
+                <div id="bookToPrice-definition" class="tab-content current">
+                    <p>The price-to-book (P/B) ratio compares a company's current market price to its book value. </p>
+                </div>
+                <div id="bookToPrice-significance" class="tab-content">
+                    <p>The book-to-price ratio is used to identify value stocks. Typically, a high book-to-price ratio suggests that a company is undervalued</p>
+                </div>
+
+                <div id="bookToPrice-caveats" class="tab-content">
+                    <p>There is potential for misleading information, through: accounting adjustments, non-operational asset and intangible assets </p>
+                </div>
+                <div id="bookToPrice-formula" class="tab-content">
+                    <h2>The book-to-price ratio is calculated as follows:</h2>
+
+
+                </div>
+                <div id="bookToPrice-code" class="tab-content">
+                    <p>###.</p>
+                </div>
+                <div id="bookToPrice-data" class="tab-content">
+                    <p>### include file upload ###</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal for Earnings Yield -->
+<div id="earningsYieldModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+            <h2>Earnings Yield</h2>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body">
+            <!-- Modal Tabs -->
+            <div class="modal-tabs">
+                <button class="tab-link current" onclick="openTab(event, 'earningsYield-definition')">Definition</button>
+                <button class="tab-link" onclick="openTab(event, 'earningsYield-significance')">Significance</button>
+                <button class="tab-link" onclick="openTab(event, 'earningsYield-caveats')">Caveats</button>
+                <button class="tab-link" onclick="openTab(event, 'earningsYield-formula')">Formula</button>
+                <button class="tab-link" onclick="openTab(event, 'earningsYield-code')">Code</button>
+                <button class="tab-link" onclick="openTab(event, 'earningsYield-data')">Data</button>
+            </div>
+
+            <!-- Tab Content for Earnings Yield -->
+            <div id="earningsYield-definition" class="tab-content current">
+                <p> The inverse of the price-to-earnings (P/E) ratio and is used to assess the relative value of a company's shares.</p>
+            </div>
+            <div id="earningsYield-significance" class="tab-content">
+                <p>Investors use earnings yield to compare the profitability of a company relative to its share price. A higher earnings yield implies a more attractive valuation and potentially a better investment compared to one with a lower earnings yield..</p>
+            </div>
+            <div id="earningsYield-caveats" class="tab-content">
+                <ul><li>Companies may report adjusted earnings that exclude certain expenses, which can inflate the earnings yield</li><li>The earnings of a company can be highly cyclical, which means the earnings yield may be misleading during certain economic phases.</li></ul>
+               
+            </div>
+            <div id="earningsYield-formula" class="tab-content">
+                <p>###</p>
+            </div>
+            <div id="earningsYield-code" class="tab-content">
+                <p>###</p>
+            </div>
+            <div id="earningsYield-data" class="tab-content">
+                <p>###</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- The Modal for P/E Ratio -->
+<div id="peRatioModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+            <h2>P/E Ratio</h2>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body">
+            <!-- Modal Tabs -->
+            <div class="modal-tabs">
+                <button class="tab-link current" onclick="openTab(event, 'peRatio-definition')">Definition</button>
+                <button class="tab-link" onclick="openTab(event, 'peRatio-significance')">Significance</button>
+                <button class="tab-link" onclick="openTab(event, 'peRatio-caveats')">Caveats</button>
+                <button class="tab-link" onclick="openTab(event, 'peRatio-formula')">Formula</button>
+                <button class="tab-link" onclick="openTab(event, 'peRatio-code')">Code</button>
+                <button class="tab-link" onclick="openTab(event, 'peRatio-data')">Data</button>
+            </div>
+
+            <!-- Tab Content for P/E Ratio -->
+            <div id="peRatio-definition" class="tab-content current">
+                <p>The P/E ratio measures a company's current share price relative to its per-share earnings. It is a valuation ratio of a company's current share price compared to its per-share earnings.</p>
+            </div>
+            <div id="peRatio-significance" class="tab-content">
+                <p>A lower P/E ratio might mean that the company is undervalued, or it might be indicative of a pessimistic future outlook. Conversely, a higher P/E ratio might mean that the company is overvalued or that investors are expecting high growth rates in the future.</p>
+            </div>
+            <div id="peRatio-caveats" class="tab-content">
+                <ul>
+                    <li>The P/E ratio does not account for the company's growth prospects, debt, or other factors that may affect a company's future earnings.</li>
+                    <li>A P/E ratio can be misleading during periods of negative earnings or when companies have significantly different levels of debt.</li>
+                </ul>
+            </div>
+            <div id="peRatio-formula" class="tab-content">
+                <p>P/E Ratio = Market Value per Share / Earnings per Share (EPS)</p>
+            </div>
+            <div id="peRatio-code" class="tab-content">
+                <p><!-- Insert code related to P/E Ratio here if necessary --></p>
+            </div>
+            <div id="peRatio-data" class="tab-content">
+                <p><!-- Insert data related to P/E Ratio here if necessary --></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <!-- The Modal for Earnings Yield would be added here following the same structure as the Book to Price modal -->
+    <script src="script.js"></script>
+</body>
+
+</main>
+</div>
